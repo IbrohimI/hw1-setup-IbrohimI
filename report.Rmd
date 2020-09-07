@@ -1,0 +1,208 @@
+
+---
+title: "Homework 1"
+author: "Dr. Michele Weigle"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+CS 625, Fall 2020
+
+## Setting up your report 
+
+1. Replace my name with your name in the 
+```
+author: "Ibrokhim Iskandarov"
+```
+line at the top of this file.  You'll do this for every report that you submit.
+
+2. Remove this section "Setting up your report" before submitting your report.
+
+## Git, GitHub
+
+1. *What is your GitHub username? Answer: IbrohimI*
+
+2. *What is the URL of your remote GitHub repo (created through Mr. Kennedy's exercises)? Answer: https://github.com/IbrohimI/newRepo.git *
+
+## R
+
+The command below will load the tidyverse package.  If you have installed R, RStudio, and the tidyverse package, it should display a list of loaded packages and their versions.
+```{r}
+library(tidyverse)
+```
+
+## R Markdown 
+
+1. *Create an ordered bulleted list with at least 3 items*
+   1. * Bulleted item 1
+   2. * Bulleted item 2
+   3. * Bulleted item 3
+
+2. *Write a paragraph that demonstrates the use of italics, bold, bold italics, and code.*
+
+   *This text is written in italics*. 
+   **This text is written in bold**.
+   **_This text is written in bold italics_**. 
+   `This text is written in code`.
+
+3. *Create an example of a fenced code block.*
+   ```
+   Example of fenced code block
+   ```
+
+4. *Create a level 4 heading*
+
+   # 1st level header
+   
+   ## 2nd level header
+   
+   ### 3rd level header
+   
+   #### 4th level header
+
+## R 
+
+#### Data Visualization Exercises
+
+1. *Run ggplot(data = mpg). What do you see?*
+    ```{r}
+    ggplot(data = mpg)
+    ```
+   
+    *I see an empty graph.*
+   
+2. *How many rows are in mpg? How many columns?*
+    ```{r}
+    mpg
+    ```
+
+    *234 rows and 11 columns.*
+
+3. *What does the drv variable describe? Read the help for ?mpg to find out.*
+    
+    *The type of drive train, where f = front-wheel drive, r = rear wheel drive, 4 = 4wd*
+
+4. *Make a scatterplot of hwy vs cyl.*
+    ```{r}
+    ggplot(data = mpg) + 
+      geom_point(mapping = aes(x = hwy, y = cyl))
+    ```
+    
+
+5. *What happens if you make a scatterplot of class vs drv? Why is the plot not useful?*
+    ```{r}
+    ggplot(data = mpg) +
+      geom_point(mapping = aes(x = class, y = drv))
+    ```
+    
+    *This is because both variables class and drv are categorical.*
+   
+
+
+#### Workflow: basics Exercises
+
+1. *Why does this code not work?*
+
+
+```{r}
+my_variable <- 10
+my_variable
+```
+
+
+2. *Tweak each of the following R commands so that they run correctly:*
+
+```{r}
+library(tidyverse)
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+filter(mpg, cyl == 8)
+filter(diamonds, carat > 3)
+```
+
+3. *Press Alt + Shift + K. What happens? How can you get to the same place using the menus?*
+
+    *From Menu select Tools, from Tools select Keyboard Shortcuts Help*
+
+## Tableau
+
+*Insert your the image of your final bar chart here*
+![Sales in the East](C:\Users\dfsdfsdsdf\Desktop\CS625\HW1\Sales_in_the_East.png)
+
+1. *What conclusions can you draw from the chart?*
+
+   *The bar chart above gives an overall dependencies of the profit in sales of various items in the east. The figure also includes the trend of profit in different years. As an example, we can conclude that the maximal profit in selling Copiers which refers to Technology category was in 2020. Additionally, we can conclude that selling of office items such as Tables was not profitable during the whole time. On the other hand, one can see a clear picture of high demand in chairs.*
+
+
+## Observable and Vega-Lite
+
+### A Taste of Observable
+
+1. *In the "New York City weather forecast" section, try replacing `Forecast: detailedForecast` with `Forecast: shortForecast`. Then press the blue play button  or use Shift-Return to run your change. What happens?*
+
+   *When we make this change, we do not see a detailed description of the weather. Instead, we can see a short statement describing the weather in few words.*
+
+1. *Under the scatterplot of temperature vs. name, try replacing `markCircle()` with `markSquare()`. Then press the blue play button  or use Shift-Return to run your change. What happens? How about `markPoint()`?*
+   
+   *When we run the program with markSquare(), all the data point become squared. In case of markPoint(), the data points become circles with an empty center.*
+
+1. *Under "Pick a location, see the weather forecast", pick a location on the map.  Where was the point you picked near?*
+
+   *The point I picked was in Eureka, NV.*
+
+1. *The last visualization on this page is a "fancy" weather chart embedded from another notebook.  Click on the 3 dots next to that chart and choose 'Download PNG'.  Insert the PNG into your report.*
+
+![A taste of observable](C:\Users\dfsdfsdsdf\Desktop\CS625\HW1\a-taste-of-observable.png)
+
+### Charting with Vega-Lite
+
+1. *Pass an option of { size: 200 } to markCircle().*
+
+   *Size of data points become larger.*
+
+1. *Try markSquare instead of markCircle.*
+   
+   *Shape of circled data points become square.*
+
+1. *Try markPoint({ shape: 'diamond' }).*
+
+   *The data points become diamond shaped.*
+
+1. *Change Horsepower to Acceleration*
+   
+   *The program will output the dependence of Miles_per_Gallon on Acceleration.*
+
+1. *Swap what fields are displayed on the x- and y-axis* 
+
+   *The program will output the dependence of Acceleration on Miles_per_Gallon.*
+
+1. *Change Name to Origin.*
+
+   *Each data point will show the country of origin.*
+
+1. *Remove the vl.y().fieldN("Origin") line.*
+
+   *Program will show a single bar 'Count of Records'*
+
+1. *Replace count() with average("Miles_per_Gallon").*
+
+   *Program will show a single bar of 'Average of Miles_per_Gallon'.*
+
+## References
+
+*Insert the list of sites you used as references as an unordered list with named links here.  This is required.*
+
+ * Github.com
+ 
+ * r4ds.had.co.nz
+ 
+ * markdownguide.org
+ 
+ * help.tableau.com
+ 
+ * observablehq.com
