@@ -1,7 +1,7 @@
 
 ---
 title: "Homework 1"
-author: "Dr. Michele Weigle"
+author: "Ibrokhim Iskandarov"
 output:
   html_document:
     df_print: paged
@@ -197,12 +197,36 @@ filter(diamonds, carat > 3)
 
 *Insert the list of sites you used as references as an unordered list with named links here.  This is required.*
 
- * Github.com
+ * https://github.com/cs625-datavis-master/github-classroom-for-students/blob/master/README.md
  
- * r4ds.had.co.nz
+ * https://r4ds.had.co.nz/introduction.html#the-tidyverse
  
- * markdownguide.org
+ * https://r4ds.had.co.nz/introduction.html#getting-help-and-learning-more
  
- * help.tableau.com
+ * https://r4ds.had.co.nz/
  
- * observablehq.com
+ * https://r4ds.had.co.nz/r-markdown.html
+ 
+ * https://r4ds.had.co.nz/communicate-intro.html
+ 
+ * https://r4ds.had.co.nz/data-visualisation.html
+ 
+ * https://r4ds.had.co.nz/data-visualisation.html#first-steps
+ 
+ * https://r4ds.had.co.nz/data-visualisation.html#common-problems
+ 
+ * https://r4ds.had.co.nz/workflow-basics.html
+ 
+ * https://r4ds.had.co.nz/workflow-basics.html#practice
+ 
+ * https://www.tableau.com/learn/tutorials/on-demand/getting-started
+ 
+ * https://help.tableau.com/current/guides/get-started-tutorial/en-us/get-started-tutorial-focus.htm
+ 
+ * https://www.earthdatascience.org/courses/earth-analytics/document-your-science/add-images-to-rmarkdown-report/
+ 
+ * https://observablehq.com/@observablehq/a-taste-of-observable
+ 
+ * https://observablehq.com/@observablehq/introduction-to-data
+ 
+ 
